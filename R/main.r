@@ -232,7 +232,7 @@ rayshader::render_highquality(
     filename = filename,
     preview = T,
     light = F,
-    environment_light = "D:/forest2019/air_museum_playground_4k.hdr",
+    environment_light = "air_museum_playground_4k.hdr",
     intensity_env = 1,
     rotate_env = 90,
     interactive = F,
