@@ -226,13 +226,22 @@ rayshader::render_camera(
 # 10. RENDER OBJECT
 #-----------------
 
+u <- "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/air_museum_playground_4k.hdr"
+hdri_file <- basename(u)
+
+download.file(
+    url = u,
+    destfile = hdri_file,
+    mode = "wb"
+)
+
 filename <- "3d_land_cover_bosnia-dark.png"
 
 rayshader::render_highquality(
     filename = filename,
     preview = T,
     light = F,
-    environment_light = "air_museum_playground_4k.hdr",
+    environment_light = hdri_file,
     intensity_env = 1,
     rotate_env = 90,
     interactive = F,
